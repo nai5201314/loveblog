@@ -1,0 +1,198 @@
+
+.container {
+  padding: 30px 15px;
+  width: calc(100% - 40px);
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  min-height: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.backBtn {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.backBtn:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: #fff;
+}
+
+.notFound {
+  text-align: center;
+  padding: 40px;
+}
+
+.letterCard {
+  max-width: 800px;
+  width: 100%;
+  padding: 30px;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.coverImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.title {
+  font-size: 28px;
+  margin: 10px 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.date {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+}
+
+.content {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #333;
+  word-break: break-word;
+}
+
+
+.content p {
+  margin: 10px 0;
+}
+
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 12px auto;
+}
+
+
+.content video {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 12px auto;
+}
+
+
+.content blockquote {
+  padding: 8px 12px;
+  background: #f6f6f6;
+  border-left: 4px solid #ddd;
+  margin: 10px 0;
+}
+
+.contentLine {
+  margin: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .backBtn {
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .letterCard {
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+
+  .header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .coverImg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin: 8px 0;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .content {
+    font-size: 15px;
+    line-height: 1.6;
+    text-indent: 1.5em;
+  }
+
+  .contentLine {
+    margin: 8px 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px 12px;
+  }
+
+  .backBtn {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .letterCard {
+    padding: 15px 12px;
+  }
+
+  .coverImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .content {
+    font-size: 14px;
+    text-indent: 1em;
+  }
+}
+
+
+.content *{
+  color:white;
+}
+

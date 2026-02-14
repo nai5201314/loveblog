@@ -1,0 +1,407 @@
+
+.timeContainer {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(95vw, 1200px);
+  max-width: 1200px;
+  padding: 50px 40px;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 120px);
+}
+
+
+.timeTitle {
+  color: #fff;
+  font-size: 32px;
+  margin: 0 0 40px 0;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.tagContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.tagBtn {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.tagBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.activeTag {
+  background: rgba(233, 30, 99, 0.3);
+  border-color: rgba(233, 30, 99, 0.5);
+  color: #fff;
+}
+
+
+.emptyTip {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  padding: 40px 0;
+}
+
+
+.timelineContainer {
+  position: relative;
+  z-index: 3;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(233, 30, 99, 0.2),
+    rgba(233, 30, 99, 0.6),
+    rgba(233, 30, 99, 0.2)
+  );
+  border-radius: 2px;
+}
+
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 80px;
+  display: flex;
+  width: 50%;
+  cursor: pointer;
+}
+
+
+.leftItem {
+  justify-content: flex-end;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.rightItem {
+  justify-content: flex-start;
+  padding-left: 40px;
+  margin-left: 50%;
+  text-align: left;
+}
+
+
+.timeNode {
+  position: absolute;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(233, 30, 99, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.leftItem .timeNode {
+  right: -20px;
+}
+
+.rightItem .timeNode {
+  left: -20px;
+}
+
+.nodeIcon {
+  font-size: 18px;
+}
+
+
+.timeCard {
+  width: calc(100% - 20px);
+  max-width: 400px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.timelineItem:hover .timeCard {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.timeDate {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+.timeCard .timeTitle {
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  color: #fff;
+  text-shadow: none;
+  text-align: inherit;
+}
+
+
+.timeTag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.初见Tag {
+  background: rgba(33, 150, 243, 0.3);
+}
+
+.告白Tag {
+  background: rgba(233, 30, 99, 0.3);
+}
+
+.纪念日Tag {
+  background: rgba(156, 39, 176, 0.3);
+}
+
+.旅行Tag {
+  background: rgba(66, 165, 245, 0.3);
+}
+
+.日常Tag {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+
+.timeDesc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+.detailBtn {
+  padding: 8px 16px;
+  border: 1px solid rgba(233, 30, 99, 0.5);
+  border-radius: 8px;
+  background: rgba(233, 30, 99, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.detailBtn:hover {
+  background: rgba(233, 30, 99, 0.4);
+}
+
+
+.leftItem .detailBtn {
+  float: right;
+}
+
+.rightItem .detailBtn {
+  float: left;
+}
+
+
+@media (max-width: 768px) {
+  .timeContainer {
+    width: 95vw;
+    padding: 30px 20px;
+    min-height: auto;
+    margin: 10px auto;
+    border-radius: 12px;
+  }
+
+  .timeTitle {
+    font-size: 22px;
+    margin: 0 0 25px 0;
+  }
+
+  .tagContainer {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .tagBtn {
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 15px;
+  }
+
+  .timeline {
+    max-width: 100%;
+  }
+
+  .timelineLine {
+    left: 20px;
+    width: 3px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-bottom: 50px;
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .leftItem,
+  .rightItem {
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .timeNode {
+    left: 8px !important;
+    right: auto !important;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+  }
+
+  .nodeIcon {
+    font-size: 14px;
+  }
+
+  .timeCard {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .timeDate {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .timeCard .timeTitle {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+
+  .timeTag {
+    font-size: 12px;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+  }
+
+  .timeDesc {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .detailBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+    float: none !important;
+  }
+
+  .emptyTip {
+    font-size: 14px;
+    padding: 30px 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .timeContainer {
+    padding: 20px 15px;
+    margin: 8px auto;
+  }
+
+  .timeTitle {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+
+  .tagContainer {
+    gap: 6px;
+    margin-bottom: 25px;
+  }
+
+  .tagBtn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .timelineItem {
+    padding-left: 45px !important;
+    margin-bottom: 40px;
+  }
+
+  .timeNode {
+    width: 25px;
+    height: 25px;
+    left: 5px !important;
+  }
+
+  .nodeIcon {
+    font-size: 12px;
+  }
+
+  .timeCard {
+    padding: 12px;
+  }
+
+  .timeCard .timeTitle {
+    font-size: 14px;
+  }
+
+  .timeTag {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .timeDesc {
+    font-size: 12px;
+  }
+
+  .detailBtn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}

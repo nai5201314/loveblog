@@ -1,0 +1,286 @@
+
+.container {
+  padding: 30px 15px;
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  min-height: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.backBtn {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.backBtn:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: #fff;
+}
+
+.notFound {
+  text-align: center;
+  padding: 40px;
+}
+
+.photoCard {
+  width: 100%;
+  padding: 30px;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.title {
+  font-size: 32px;
+  margin: 10px 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.date {
+  color: rgba(255,255,255,0.8);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.photoWrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoImg {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.photoImg:hover {
+  transform: scale(1.02);
+  cursor: zoom-in;
+}
+
+.photoImg.zoomed {
+  transform: scale(1.05);
+}
+
+.loadingPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: rgba(255,255,255,0.7);
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top-color: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.desc {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+}
+
+.desc p {
+  margin: 0;
+}
+
+
+.zoomOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  padding: 20px;
+}
+
+.zoomImg {
+  max-width: 95%;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
+  cursor: zoom-out;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  .zoomOverlay {
+    padding: 10px;
+  }
+
+  .zoomImg {
+    max-width: 100%;
+    max-height: 100vh;
+  }
+
+  .closeBtn {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .backBtn {
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .photoCard {
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin: 8px 0;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+
+  .photoWrapper {
+    min-height: 300px;
+    margin-bottom: 15px;
+  }
+
+  .photoImg {
+    max-height: 60vh;
+  }
+
+  .desc {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px 12px;
+  }
+
+  .backBtn {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .photoCard {
+    padding: 15px 12px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .photoWrapper {
+    min-height: 250px;
+  }
+
+  .photoImg {
+    max-height: 50vh;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+}

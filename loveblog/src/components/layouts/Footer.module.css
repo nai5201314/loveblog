@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+}
+
+
+.icpGroup {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 4px;
+}
+
+.icp {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.icpname {
+  font-size: 9px;
+  color: white;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  color: white;
+  margin: 0;
+}

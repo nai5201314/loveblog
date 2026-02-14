@@ -1,0 +1,21 @@
+.create{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+.listbox{
+    margin-top: 10px;
+    display: block;
+    border-top:   2px solid rgb(235, 206, 226);
+    padding: 10px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+.btn{
+    display: flex;
+    gap: 15px;
+}

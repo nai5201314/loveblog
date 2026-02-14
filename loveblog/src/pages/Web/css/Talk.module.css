@@ -1,0 +1,391 @@
+
+.talkContainer {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(95vw, 1200px);
+  max-width: 1200px;
+  padding: 50px 40px;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.talkTitle {
+  color: #fff;
+  font-size: 32px;
+  margin: 0 0 40px 0;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.inputArea {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inputGroup label {
+  color: #fff;
+  font-size: 16px;
+  min-width: 80px;
+}
+
+.qqInput,
+.nicknameInput {
+  flex: 1;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  backdrop-filter: blur(8px);
+  min-width: 200px;
+}
+
+.qqInput::placeholder,
+.nicknameInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.avatarPreview {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.messageInput {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  min-height: 100px;
+  resize: none;
+  backdrop-filter: blur(8px);
+}
+
+.messageInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.submitBtn {
+  align-self: flex-end;
+  padding: 12px 30px;
+  background: rgba(76, 175, 80, 0.3);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.submitBtn:hover {
+  background: rgba(76, 175, 80, 0.5);
+}
+
+.submitBtn:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+
+.messageList {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.messageItem {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.messageItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.userName {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.userQq {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+.messageMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.messageCity {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+.messageTime {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+
+.messageContent {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+
+.deleteBtn {
+  padding: 6px 12px;
+  background: rgba(244, 67, 54, 0.2);
+  border: 1px solid rgba(244, 67, 54, 0.4);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteBtn:hover {
+  background: rgba(244, 67, 54, 0.4);
+}
+
+
+.emptyTip {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  padding: 40px 0;
+}
+
+
+@media (max-width: 768px) {
+  .talkContainer {
+    width: 95vw;
+    padding: 30px 20px;
+    min-height: auto;
+    margin: 10px auto;
+    border-radius: 12px;
+  }
+
+  .talkTitle {
+    font-size: 22px;
+    margin: 0 0 25px 0;
+  }
+
+  .inputArea {
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .userInfo {
+    gap: 12px;
+  }
+
+  .inputGroup {
+    gap: 10px;
+  }
+
+  .inputGroup label {
+    font-size: 14px;
+    min-width: 70px;
+  }
+
+  .qqInput,
+  .nicknameInput {
+    font-size: 14px;
+    min-width: 150px;
+  }
+
+  .avatarPreview {
+    width: 35px;
+    height: 35px;
+  }
+
+  .messageInput {
+    padding: 12px;
+    font-size: 14px;
+    min-height: 80px;
+  }
+
+  .submitBtn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .messageList {
+    gap: 15px;
+  }
+
+  .messageItem {
+    padding: 18px;
+  }
+
+  .messageHeader {
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .userAvatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .userName {
+    font-size: 14px;
+  }
+
+  .userQq {
+    font-size: 11px;
+  }
+
+  .messageTime {
+    font-size: 12px;
+  }
+
+  .messageContent {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .deleteBtn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .emptyTip {
+    font-size: 14px;
+    padding: 30px 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .talkContainer {
+    padding: 20px 15px;
+    margin: 8px auto;
+  }
+
+  .talkTitle {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+
+  .inputArea {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .inputGroup label {
+    font-size: 13px;
+    min-width: 60px;
+  }
+
+  .qqInput,
+  .nicknameInput {
+    font-size: 13px;
+    min-width: 120px;
+  }
+
+  .messageInput {
+    padding: 10px;
+    font-size: 13px;
+    min-height: 70px;
+  }
+
+  .submitBtn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .messageItem {
+    padding: 15px;
+  }
+
+  .messageContent {
+    font-size: 13px;
+  }
+}
